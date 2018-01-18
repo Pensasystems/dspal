@@ -1,3 +1,6 @@
 [submodule "cmake_hexagon"]
 	path = cmake_hexagon
 	url = https://github.com/ATLFlight/cmake_hexagon
+[submodule "mavlink"]
+	path = include/mavlink
+	url = https://github.com/mavlink/mavlink
