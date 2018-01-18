@@ -49,6 +49,5 @@ include_directories(
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O2 -g -fno-strict-aliasing -fdata-sections -fno-zero-initialized-in-bss -Wall -Wextra -Werror -Wno-unused-parameter -Wno-unused-function -Wno-unused-variable -Wno-gnu-array-member-paren-init -Wno-cast-align -Wno-missing-braces -Wno-strict-aliasing") 
 
 add_subdirectory(dspal_tester)
-add_subdirectory(version_test)
 
 # vim: set noet fenc=utf-8 ff=unix ft=cmake :

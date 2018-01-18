@@ -58,11 +58,11 @@
 
 __BEGIN_DECLS
 
-int display_test_results(int result, const char *label);
+char* display_test_results(char* result, const char *label);
 
 void log_error(const char *error);
 
-const char *get_result_string(int result);
+const char *get_result_string(char result);
 
 void test_failed(const char *msg, const char *file, int lineNumber);
 

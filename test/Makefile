@@ -57,7 +57,6 @@ dspal_tester: ENV_VARS submodules
 	cd build && make
 	
 load: dspal_tester
-	cd build && make dspal_tester-load && make version_test-load
-
+	cd build && make dspal_tester-load 
 clean:
 	rm -rf build

@@ -37,23 +37,12 @@
 
 #define POSIX_TEST_STRING_BUFFER_SIZE 512
 
-int display_test_results(int result, const char *label)
+char* display_test_results(char* result, const char *label)
 {
-	LOG_INFO("[%s] %s\n", get_result_string(result), label);
+	LOG_INFO("ShowMeWhatYouGot: %s %s\n", result, label);
 	return result;
 }
 
-const char *get_result_string(int result)
-{
-
-	const char *result_str = "* FAIL";
-
-	if (result == TEST_PASS) { result_str = "  PASS"; }
-
-	if (result == TEST_SKIP) { result_str = "- SKIP"; }
-
-	return result_str;
-}
 
 void log_error(const char *error)
 {
