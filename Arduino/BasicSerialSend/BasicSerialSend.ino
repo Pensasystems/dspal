@@ -8,6 +8,6 @@ void setup()
 void loop()
 {
    delay(250); 
-   Serial.write("12.4");
+   Serial.write("1240");
 }
 

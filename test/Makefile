@@ -51,12 +51,13 @@ ENV_VARS:
 .PHONY submodules:
 	cd ../ && git submodule init && git submodule update ${SUBMODULE_FLAG}
 
-.PHONY: dspal_tester version_test
+.PHONY: dspal_tester 
 dspal_tester: ENV_VARS submodules
 	mkdir -p build && cd build && cmake -Wno-dev .. -DQC_SOC_TARGET=${QC_SOC_TARGET} -DCMAKE_TOOLCHAIN_FILE=../cmake_hexagon/toolchain/Toolchain-qurt.cmake
 	cd build && make
 	
 load: dspal_tester
-	cd build && make dspal_tester-load 
+	cd build && make dspal_tester-load
+
 clean:
 	rm -rf build
